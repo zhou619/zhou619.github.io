@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+timezone: Asia/Shanghai
 title: 终究的个人记录
 email: zhongzhou97@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -32,8 +33,17 @@ github_username: zhou619
 
 # Build settings
 theme: minima
+minima:
+  date_format: "%Y-%m-%d %H:%M:%S"
 plugins:
   - jekyll-feed
+# 主页上显示文章摘录
+show_excerpts: false
+
+header_pages:
+  - about.markdown
+  # - test.markdown
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
