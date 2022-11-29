@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "MySQL 相关"
+date:   2022-11-29 14:59:10 +0800
+categories: post
+permalink: /mysql
+published: true
+---
+#####  导出整个数据库结构和数据
+```bash
+sudo mysqldump -uroot -p"password" -h 127.0.0.1 -P 3306 database > database.sql
+```
+#####  导出整个数据库结构（不包含数据）
+```bash
+sudo mysqldump -uroot -p"password" -h 127.0.0.1 -P 3306 -d database > database.sql
+```
+#####  导出单个数据表结构和数据
+```bash
+sudo mysqldump -uroot -p"password" -h 127.0.0.1 -P 3306 database table > database.sql
+```
+#####  导出单个数据表结构（不包含数据）
+```bash
+sudo mysqldump -uroot -p"password" -h 127.0.0.1 -P 3306 -d database table > database.sql
+```
+#####  添加表字段
+```bash
+ALTER TABLE table_name ADD field_name INT(11) NOT NULL DEFAULT 0 COMMENT 'test';
+```
+#####  修改表字段
+```bash
+ALTER TABLE table_name MODIFY field_name INT(11) NOT NULL DEFAULT 0 COMMENT 'test';
+```
+#####  删除表字段
+```bash
+ALTER TABLE table_name DROP field_name;
+```
